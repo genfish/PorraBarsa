@@ -10,7 +10,7 @@ Les comandes següents estan disponibles al bot de Telegram:
 /nova           -> Crear una nova porra
 /consultar      -> Consultar les apostes actuals
 /apostar        -> Fer una aposta
-/cancelar       -> Cancel·lar una aposta
+/cancelar       -> Cancel·lar la porra en marxa
 /finalitzar     -> Finalitzar la porra i calcular resultats
 /classificacio  -> Veure la classificació actual
 ```
@@ -56,7 +56,7 @@ sudo apt install python3 python3-pip
 
 ## 📁 Estructura del projecte
 ```
-porra/
+carpeta_proj/
 │
 ├── porra.py               # Fitxer principal del bot
 ├── database.py            # Funcions per interactuar amb la base de dades
@@ -97,12 +97,12 @@ Perquè el bot s'executi automàticament i escolti constantment missatges a Tele
 
    [Service]
    User=nom_usuari
-   WorkingDirectory=/porra
-   ExecStart=/porra/entorn/bin/python3 /porra/porra.py
-   Environment="PYTHONPATH=/porra/entorn/lib/python3.10/site-packages"
+   WorkingDirectory=/carpeta_proj
+   ExecStart=/carpeta_proj/entorn/bin/python3 /carpeta_proj/porra.py
+   Environment="PYTHONPATH=/carpeta_proj/entorn/lib/python3.10/site-packages"
    Restart=always
-   StandardOutput=append:/porra/messages.log
-   StandardError=append:/porra/errors.log
+   StandardOutput=append:/carpeta_proj/messages.log
+   StandardError=append:/carpeta_proj/errors.log
 
    [Install]
    WantedBy=multi-user.target
