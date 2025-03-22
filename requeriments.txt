@@ -1,0 +1,3 @@
+python-telegram-bot
+mysql-connector-python
+Django>=4.0

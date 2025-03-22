@@ -1,0 +1,23 @@
+# Carpetes i fitxers innecessaris
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.php-ini
+.php-version
+
+# Entorns virtuals
+entorn/
+
+# Fitxers de configuració o secrets
+config.py
+
+# Django
+app/
+web/
+static/
+manage.py
+
+# Arxius de log
+messages.log
+errors.log
